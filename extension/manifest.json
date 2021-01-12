@@ -4,7 +4,7 @@
 
   "name": "Pinboard Keyboard Shortcut",
   "description": "Bookmark the current page to Pinboard via a keyboard shortcut",
-  "version": "1.0.1",
+  "version": "1.3",
 
   "background": {
     "scripts": ["bookmark.js"],
@@ -22,9 +22,7 @@
   "commands": {
     "bookmark-on-pinboard": {
       "suggested_key": {
-        "default": "Ctrl+D",
-        "mac": "Command+D",
-        "linux": "Ctrl+D"
+        "default": "Alt+D"
       },
       "description": "Bookmark the current page on Pinboard"
     }
@@ -32,8 +30,8 @@
 
   "content_scripts": [
     {
-      "js": ["contentscript.js"],
-      "matches": [ "http://*/*", "https://*/*" ]
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": ["contentscript.js"]
     }
   ]
 
